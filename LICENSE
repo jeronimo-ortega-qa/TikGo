@@ -1,0 +1,18 @@
+Copyright (c) 2026 Jerónimo Ortega Sosa. Todos los derechos reservados.
+
+Este repositorio contiene documentación del software TikGO (planes y resultados de
+pruebas, registro de defectos, documentos de auditoría, de seguridad y de
+privacidad).
+
+Se permite leer esta documentación, citarla con mención de la fuente y usarla para
+auditar o evaluar TikGO.
+
+No se concede ninguna licencia sobre el software TikGO, su código fuente, sus
+binarios, su diseño ni su nombre. Cualquier otra copia, modificación, distribución o
+uso de esta documentación requiere autorización escrita del autor.
+
+Que GitHub permita ver este repositorio o hacer un "fork" dentro de su plataforma,
+según sus propios términos de servicio, no concede ningún derecho adicional.
+
+Los componentes de terceros nombrados en esta documentación pertenecen a sus
+autores y se rigen por sus propias licencias.

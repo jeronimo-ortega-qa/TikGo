@@ -1,0 +1,1624 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.5.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:8141870d-f85d-451f-87d2-3cd07fe2ab99",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-13T04:02:57.760Z",
+    "lifecycles": [
+      {
+        "phase": "build"
+      }
+    ],
+    "tools": [
+      {
+        "vendor": "npm",
+        "name": "cli",
+        "version": "12.0.1"
+      }
+    ],
+    "component": {
+      "bom-ref": "tikgo@0.15.0",
+      "type": "library",
+      "name": "tikgo",
+      "version": "0.15.0",
+      "scope": "required",
+      "author": "Jerónimo Ortega Sosa",
+      "description": "TikGO — consola de escritorio para acompañar streams de TikTok Live: login, TTS, alertas y catálogo",
+      "purl": "pkg:npm/tikgo@0.15.0",
+      "properties": [],
+      "externalReferences": []
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "@bufbuild/protobuf@2.14.0",
+      "type": "library",
+      "name": "@bufbuild/protobuf",
+      "version": "2.14.0",
+      "scope": "required",
+      "description": "Protocol Buffers for ECMAScript. Fully compliant with the Protobuf conformance tests.",
+      "purl": "pkg:npm/%40bufbuild/protobuf@2.14.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@bufbuild/protobuf/-/protobuf-2.14.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/bufbuild/protobuf-es.git"
+        },
+        {
+          "type": "website",
+          "url": "https://protobufes.com/"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "0b7506b220b04a9ac4d8d2882050378420e5a574cc0805d166e115a7cf0bd46637e98e35fab60be5faf213e9ce161a78a7824f42f755f0f4380d680781e4c4fb"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "(Apache-2.0 AND BSD-3-Clause)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "@keyv/serialize@1.1.1",
+      "type": "library",
+      "name": "@keyv/serialize",
+      "version": "1.1.1",
+      "scope": "required",
+      "author": "Jared Wray <me@jaredwray.com> (https://jaredwray.com)",
+      "description": "Serialization for Keyv",
+      "purl": "pkg:npm/%40keyv/serialize@1.1.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@keyv/serialize/-/serialize-1.1.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/jaredwray/keyv.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/jaredwray/keyv"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/jaredwray/keyv/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "7579f715984fbf4512fbb76d26c222d91f9ceea5988917a8121e73527b5609fe284a930d89bf050e14a879dea6dd0c99771e612bb88b164624deb371c2df2f4c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@sec-ant/readable-stream@0.4.1",
+      "type": "library",
+      "name": "@sec-ant/readable-stream",
+      "version": "0.4.1",
+      "scope": "required",
+      "author": "Ze-Zheng Wu",
+      "description": "A tiny, zero-dependency yet spec-compliant asynchronous iterator polyfill/ponyfill for ReadableStreams.",
+      "purl": "pkg:npm/%40sec-ant/readable-stream@0.4.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@sec-ant/readable-stream/-/readable-stream-0.4.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/Sec-ant/readable-stream.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/Sec-ant/readable-stream"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/Sec-ant/readable-stream/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "f37d6aa24f6bdadf009712e4a38d32d9e6e048385e9de9c26ad2d5796fee06d9c73f28473af1b40bb4ef7e079c57ec07cc89b9294202833995a564be20c1007a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "byte-counter@0.1.0",
+      "type": "library",
+      "name": "byte-counter",
+      "version": "0.1.0",
+      "scope": "required",
+      "author": "Sindre Sorhus",
+      "description": "Count bytes passing through a stream",
+      "purl": "pkg:npm/byte-counter@0.1.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/byte-counter/-/byte-counter-0.1.0.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "8e17912d531e50aac3063570d8ee7e93812f478b7dc2dc472fe6e8fcbc5f931b157ae18ccb76b94841a05dd005038152cd3ad4f2b417408aec677a01ab96b4a5"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "chunk-data@0.1.0",
+      "type": "library",
+      "name": "chunk-data",
+      "version": "0.1.0",
+      "scope": "required",
+      "author": "Sindre Sorhus",
+      "description": "Split buffers and streams into smaller chunks",
+      "purl": "pkg:npm/chunk-data@0.1.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/chunk-data/-/chunk-data-0.1.0.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "cc5c8fb720b4499e99bbbf5bf6c398b5765c82bb177b446978faf34728f9da1615146d7e464eab06a8e338493e18d4307373c85fef3ab5e40ca24f7bd29a1dd6"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "cross-fetch@4.1.0",
+      "type": "library",
+      "name": "cross-fetch",
+      "version": "4.1.0",
+      "scope": "required",
+      "author": "Leonardo Quixada <lquixada@gmail.com>",
+      "description": "Universal WHATWG Fetch API for Node, Browsers and React Native",
+      "purl": "pkg:npm/cross-fetch@4.1.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/cross-fetch/-/cross-fetch-4.1.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/lquixada/cross-fetch.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/lquixada/cross-fetch"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/lquixada/cross-fetch/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "b8a9b93d4f8c1d3a28b6558463e999e2fbd7a029f87cb4314fd752735b1754c48590835325537c7004113a9c1c2a6f1b27f73bae06552015b31f94fbf2c35967"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "edge-tts-universal@1.4.0",
+      "type": "library",
+      "name": "edge-tts-universal",
+      "version": "1.4.0",
+      "scope": "required",
+      "author": "Travis <contact@travis.engineer> (https://travis.engineer)",
+      "description": "Universal text-to-speech library using Microsoft Edge's online TTS service. Works in Node.js and browsers WITHOUT needing Microsoft Edge, Windows, or an API key",
+      "purl": "pkg:npm/edge-tts-universal@1.4.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/edge-tts-universal/-/edge-tts-universal-1.4.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/travisvn/edge-tts-universal.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/travisvn/edge-tts-universal"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/travisvn/edge-tts-universal/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "e77664e941f7fb783ce3800f8ee86d1dbd8a4d37512d8e9f66d119b12205dcacf7b58129b23c1079d0ad6b3f2a4dac5876a14e32817208634e1e6d8fc6e5f627"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "AGPL-3.0"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "is-stream@4.0.1",
+      "type": "library",
+      "name": "is-stream",
+      "version": "4.0.1",
+      "scope": "required",
+      "author": "Sindre Sorhus",
+      "description": "Check if something is a Node.js stream",
+      "purl": "pkg:npm/is-stream@4.0.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/is-stream/-/is-stream-4.0.1.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "0e7cfdd8d2270ea61c90611426febcf516d18934841c243bc0e55e00b6e43b3f7df58a6a4f8eb2311206b52365da208bd70680652c78d3e879f4d57f130cd5fc"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "isomorphic-ws@5.0.0",
+      "type": "library",
+      "name": "isomorphic-ws",
+      "version": "5.0.0",
+      "scope": "required",
+      "author": "@heineiuo",
+      "description": "Isomorphic implementation of WebSocket",
+      "purl": "pkg:npm/isomorphic-ws@5.0.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/isomorphic-ws/-/isomorphic-ws-5.0.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/heineiuo/isomorphic-ws.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/heineiuo/isomorphic-ws#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/heineiuo/isomorphic-ws/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "9ae21ded9ce7f72c03b325e04c869f4ebcb6b15de7c9265e5037ba61e7557751efbae7a9e40b0896a2be5de7d6a584f2246e5ee74dc5db122e4f695c53aac24b"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "node-fetch@2.7.0",
+      "type": "library",
+      "name": "node-fetch",
+      "version": "2.7.0",
+      "scope": "required",
+      "author": "David Frank",
+      "description": "A light-weight module that brings window.fetch to node.js",
+      "purl": "pkg:npm/node-fetch@2.7.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/node-fetch/-/node-fetch-2.7.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/bitinn/node-fetch.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/bitinn/node-fetch"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/bitinn/node-fetch/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "7381517d49bf75b71667b53ed56ab40300b214bfb79edd9b130d39c1fc52cfe0d6a56b22b609928189b2d9d41d5b2282d7af7810b3ea32cfd8cd448da332edf0"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "react@19.2.8",
+      "type": "library",
+      "name": "react",
+      "version": "19.2.8",
+      "scope": "required",
+      "description": "React is a JavaScript library for building user interfaces.",
+      "purl": "pkg:npm/react@19.2.8",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/react/-/react-19.2.8.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/react/react.git"
+        },
+        {
+          "type": "website",
+          "url": "https://react.dev/"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "3d66980352ffabdbb6bbbc58422f98dcbdd87e789eed7c8b79a248095d4c183e8ba6bb01c5c02a1a3632af4798de9f9076c03ec7f22b92de1089ff03eb7f926f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "react-dom@19.2.8",
+      "type": "library",
+      "name": "react-dom",
+      "version": "19.2.8",
+      "scope": "required",
+      "description": "React package for working with the DOM.",
+      "purl": "pkg:npm/react-dom@19.2.8",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/react-dom/-/react-dom-19.2.8.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/react/react.git"
+        },
+        {
+          "type": "website",
+          "url": "https://react.dev/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/react/react/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ad5a6b8a67c6046dc347e4ead08406d834f93f12ad8755881839a3e723e6973af86017bbbb213e0eee2856a4c35d948718619746d4c910649278fc9008c06095"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "scheduler@0.27.0",
+      "type": "library",
+      "name": "scheduler",
+      "version": "0.27.0",
+      "scope": "required",
+      "description": "Cooperative scheduler for the browser environment.",
+      "purl": "pkg:npm/scheduler@0.27.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/scheduler/-/scheduler-0.27.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/facebook/react.git"
+        },
+        {
+          "type": "website",
+          "url": "https://react.dev/"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/facebook/react/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "78dbfe5ab55b2aed5fdef6d8253ff1b62179b320391cf20cb5ff48818fe72a0d2c5aacc0504bea63fc66ece71973fa9a7cbc7f88ef4580e99e480a78bf9b62fd"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "tagged-tag@1.0.0",
+      "type": "library",
+      "name": "tagged-tag",
+      "version": "1.0.0",
+      "scope": "required",
+      "author": "Sindre Sorhus",
+      "description": "Unique tag for use in the type-fest Tagged type",
+      "purl": "pkg:npm/tagged-tag@1.0.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/tagged-tag/-/tagged-tag-1.0.0.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "c84158ad586877e85d372c7b8390679246f41bab22f0726eacea0e1200bc07f3b4b972c795a7b2ffae4a46fe9cb9604d84180728044e56973b43262a1398059e"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "tiktok-live-api-sdk@0.4.0-beta1",
+      "type": "library",
+      "name": "tiktok-live-api-sdk",
+      "version": "0.4.0-beta1",
+      "scope": "required",
+      "author": "eulerstream",
+      "description": "Node.js module for interacting with the Euler Stream TikTok LIVE API.",
+      "purl": "pkg:npm/tiktok-live-api-sdk@0.4.0-beta1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/tiktok-live-api-sdk/-/tiktok-live-api-sdk-0.4.0-beta1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/EulerStream/Euler-Api-Sdk"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/eulerstream/EulerApiSdk"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "ae777a85ccec84cb16755480bb21be61244bd8498bde26a02bacbfc2457099b9c1daf4479e578abc3e494bf66dc6546f8122cbe529cd372a141f32b27acbfc06"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "tiktok-live-connector@2.4.4",
+      "type": "library",
+      "name": "tiktok-live-connector",
+      "version": "2.4.4",
+      "scope": "required",
+      "author": "zerodytrash",
+      "description": "TikTok LIVE API for Node.js: The #1 library for real-time chat, gift, like, follow and viewer events from any TikTok livestream.",
+      "purl": "pkg:npm/tiktok-live-connector@2.4.4",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/tiktok-live-connector/-/tiktok-live-connector-2.4.4.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/zerodytrash/TikTok-Live-Connector.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/zerodytrash/TikTok-Live-Connector#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/zerodytrash/TikTok-Live-Connector/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "c106bc703a9fd0d84bc89077cc6ceb0dccae6ecaacc14a89a82af7c93e7c173a73eac827efc6ab374cfb3e4d3a3c509861d8fc24431b856f9212bab2cf01f783"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "AGPL-3.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "@sindresorhus/is@8.1.0",
+      "type": "library",
+      "name": "@sindresorhus/is",
+      "version": "8.1.0",
+      "scope": "required",
+      "author": "Sindre Sorhus",
+      "description": "Type check values",
+      "purl": "pkg:npm/%40sindresorhus/is@8.1.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/@sindresorhus/is/-/is-8.1.0.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "d925ffd635ba08830089e6ef56fe59227a0212e59098cc81a095d7182e958da923a7f7e9c4fe5e1eceff57a58ab8f1086ee2b4ebe5698c7faf8cb421afdf2b0d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "cacheable-lookup@7.0.0",
+      "type": "library",
+      "name": "cacheable-lookup",
+      "version": "7.0.0",
+      "scope": "required",
+      "author": "Szymon Marczak",
+      "description": "A cacheable dns.lookup(…) that respects TTL",
+      "purl": "pkg:npm/cacheable-lookup@7.0.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/cacheable-lookup/-/cacheable-lookup-7.0.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/szmarczak/cacheable-lookup.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/szmarczak/cacheable-lookup#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/szmarczak/cacheable-lookup/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "faa272c78c622ab6bc999adcc218cc44c5210f9351d51f1eb0f933218c57f7a26279c168c405c5bb3fc6a51dfe7afe0f13559a9878a9efcc15d2f7263d0b69f3"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "cacheable-request@13.0.19",
+      "type": "library",
+      "name": "cacheable-request",
+      "version": "13.0.19",
+      "scope": "required",
+      "author": "Jared Wray <me@jaredwray.com> (http://jaredwray.com)",
+      "description": "Wrap native HTTP requests with RFC compliant cache support",
+      "purl": "pkg:npm/cacheable-request@13.0.19",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/cacheable-request/-/cacheable-request-13.0.19.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/jaredwray/cacheable.git"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "4955c61f4dfbf8ca3568830ee41d94725791e371468c574df8cf0939b4b2128436327e02383456c76f203798e24c5d27e48b6c82d2197f26ab80c36cf065f892"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "decompress-response@10.0.0",
+      "type": "library",
+      "name": "decompress-response",
+      "version": "10.0.0",
+      "scope": "required",
+      "author": "Sindre Sorhus",
+      "description": "Decompress a HTTP response if needed",
+      "purl": "pkg:npm/decompress-response@10.0.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/decompress-response/-/decompress-response-10.0.0.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "a23eca593a09baec653ebed5574bda6efc44222a8d328faad0db9e2222f75e1b700ba155397ec7af57340b8783d1b99fed9afe4bf7527f6c6f907dc077ab14dd"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "get-stream@9.0.1",
+      "type": "library",
+      "name": "get-stream",
+      "version": "9.0.1",
+      "scope": "required",
+      "author": "Sindre Sorhus",
+      "description": "Get a stream as a string, Buffer, ArrayBuffer or array",
+      "purl": "pkg:npm/get-stream@9.0.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/get-stream/-/get-stream-9.0.1.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "9150b13c5def40cfcdd01d4f9a8a9552a8073fe11e5639994909fed680913f17763f6d4fd85d7d94881b4771c1a2c6c1d4f521380a1cb499df127d866cdd9e64"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "got@15.1.0",
+      "type": "library",
+      "name": "got",
+      "version": "15.1.0",
+      "scope": "required",
+      "description": "Human-friendly and powerful HTTP request library for Node.js",
+      "purl": "pkg:npm/got@15.1.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/got/-/got-15.1.0.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "0c6f83000911b67a3ea03aff181b2588092137dfb373338f339a9793779f0d9637aafc919d953e3704256ff20e63a7129f1c5347dcf768709c4a12728dbd2124"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "http2-wrapper@2.2.1",
+      "type": "library",
+      "name": "http2-wrapper",
+      "version": "2.2.1",
+      "scope": "required",
+      "author": "Szymon Marczak",
+      "description": "HTTP2 client, just with the familiar `https` API",
+      "purl": "pkg:npm/http2-wrapper@2.2.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/http2-wrapper/-/http2-wrapper-2.2.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/szmarczak/http2-wrapper.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/szmarczak/http2-wrapper#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/szmarczak/http2-wrapper/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "5799d5c353c03a07c8dcb99e6a3d84c667a0edf7a78e1454833d653d27b3cb50ae84f61b810b5b423e2365f10010c95a2febeea6cbe18ea0b28f3a1bd32c6c99"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "keyv@5.6.0",
+      "type": "library",
+      "name": "keyv",
+      "version": "5.6.0",
+      "scope": "required",
+      "author": "Jared Wray <me@jaredwray.com> (http://jaredwray.com)",
+      "description": "Simple key-value storage with support for multiple backends",
+      "purl": "pkg:npm/keyv@5.6.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/keyv/-/keyv-5.6.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/jaredwray/keyv.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/jaredwray/keyv"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/jaredwray/keyv/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "0980c3dd23adb07b725de10e458471daa06da432458d14c65d4b66344306cb360e2a3d53137b7271d961a3b900d547f1f4e616673839d901411802d38abcc34b"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "lowercase-keys@4.0.1",
+      "type": "library",
+      "name": "lowercase-keys",
+      "version": "4.0.1",
+      "scope": "required",
+      "author": "Sindre Sorhus",
+      "description": "Lowercase the keys of an object",
+      "purl": "pkg:npm/lowercase-keys@4.0.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/lowercase-keys/-/lowercase-keys-4.0.1.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "c08f4dba2fcbf157c00dafdcaffecd42bb9a012935936dff521d64850d360425588a2cbc1780213869d0cc9cb7165fdce381a76126d91eff20ec4706de427542"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "mimic-response@4.0.0",
+      "type": "library",
+      "name": "mimic-response",
+      "version": "4.0.0",
+      "scope": "required",
+      "author": "Sindre Sorhus",
+      "description": "Mimic a Node.js HTTP response stream",
+      "purl": "pkg:npm/mimic-response@4.0.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/mimic-response/-/mimic-response-4.0.0.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "7b92121fdc4c614d03ceb4fe8e5f2adb37bd0fa79606da3e23c08da5ef9523e2b627f17f9373dd91d4ddcf8c2f1951f8353a68f8d4584d522e31010c31cb0baa"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "normalize-url@8.1.1",
+      "type": "library",
+      "name": "normalize-url",
+      "version": "8.1.1",
+      "scope": "required",
+      "author": "Sindre Sorhus",
+      "description": "Normalize a URL",
+      "purl": "pkg:npm/normalize-url@8.1.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/normalize-url/-/normalize-url-8.1.1.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "2587340cf969196078d241f9834ee0193ad8b8ca95eb9de4dee04a63ab884cf59db37334a2fdc66961a9f656c4dc1ce7831f3e5e47f382f0126fdbe4f490c55d"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "responselike@4.0.2",
+      "type": "library",
+      "name": "responselike",
+      "version": "4.0.2",
+      "scope": "required",
+      "description": "A response-like object for mocking a Node.js HTTP response stream",
+      "purl": "pkg:npm/responselike@4.0.2",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/responselike/-/responselike-4.0.2.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "70693c21b584027682a5d02dd411f3277021cf97b00c96b42ac793b04dea211309dc2ebdf16f29b0cedbc8279656977f1daec5518cee455cd7a0aa0cea74546c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "lowercase-keys@3.0.0",
+      "type": "library",
+      "name": "lowercase-keys",
+      "version": "3.0.0",
+      "scope": "required",
+      "author": "Sindre Sorhus",
+      "description": "Lowercase the keys of an object",
+      "purl": "pkg:npm/lowercase-keys@3.0.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/lowercase-keys/-/lowercase-keys-3.0.0.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "a33082ea0750fa0957390b2f78a0f462c0f2f034901630d3cf8cf2cc41cd579f893f90fad8b99f0d9ea8d5cc9c171f68b86f78d0ce5d13c0bc0937b0763d9859"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "tiktok-live-proto@0.2.4",
+      "type": "library",
+      "name": "tiktok-live-proto",
+      "version": "0.2.4",
+      "scope": "required",
+      "description": "Clean-room TypeScript bindings for the TikTok Webcast Protobuf schema.",
+      "purl": "pkg:npm/tiktok-live-proto@0.2.4",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/tiktok-live-proto/-/tiktok-live-proto-0.2.4.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/isaackogan/TikTok-Webcast-Protobuf"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "317bcff27ee8040ae4b84b7f2e40e4c9384fa674af9f169c7120dfe4736f896238e592f8ec9af8f159c14a144e1fa94b542b960b8cb86d3c3f126894780d6ddc"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "AGPL-3.0-only"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "tr46@0.0.3",
+      "type": "library",
+      "name": "tr46",
+      "version": "0.0.3",
+      "scope": "required",
+      "author": "Sebastian Mayr <npm@smayr.name>",
+      "description": "An implementation of the Unicode TR46 spec",
+      "purl": "pkg:npm/tr46@0.0.3",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/tr46/-/tr46-0.0.3.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/Sebmaster/tr46.js.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/Sebmaster/tr46.js#readme"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/Sebmaster/tr46.js/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "37758cb2ea95eba953df40ab5cd6c48f1e06130968c37bfaaebe2609cbfaa6b9dfc214b4d6b920c857633cd05877d6ebecba57575f849a1d357c79ead86760af"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "type-fest@5.8.0",
+      "type": "library",
+      "name": "type-fest",
+      "version": "5.8.0",
+      "scope": "required",
+      "author": "Sindre Sorhus",
+      "description": "A collection of essential TypeScript types",
+      "purl": "pkg:npm/type-fest@5.8.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/type-fest/-/type-fest-5.8.0.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "606604573dc59b98b2fc0c9bb80d28c8d16aec7e0281035f469fea7def27bab13592e09e366dffbdf9bd5f832d97ea8bc9a289521e71ac5670a20af8d5232360"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "(MIT OR CC0-1.0)"
+        }
+      ]
+    },
+    {
+      "bom-ref": "typed-emitter@2.1.0",
+      "type": "library",
+      "name": "typed-emitter",
+      "version": "2.1.0",
+      "scope": "required",
+      "author": "Andy Wermke (https://github.com/andywer)",
+      "description": "Strictly typed event emitter interface for TypeScript 3.",
+      "purl": "pkg:npm/typed-emitter@2.1.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/typed-emitter/-/typed-emitter-2.1.0.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "83f2b36d829b1f90b6bcf91a5c6bbc0c9947ac62872ec336e5983d5ae0bda4c19fbaf4fe5f6e6d6505a8e5f2b5063066f3e52b544f4b0c2bda63409093e7d70c"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "uint8array-extras@1.5.0",
+      "type": "library",
+      "name": "uint8array-extras",
+      "version": "1.5.0",
+      "scope": "required",
+      "author": "Sindre Sorhus",
+      "description": "Useful utilities for working with Uint8Array (and Buffer)",
+      "purl": "pkg:npm/uint8array-extras@1.5.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/uint8array-extras/-/uint8array-extras-1.5.0.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "aef2920620b9cea08288367d9003accd9703bdd007c3020a246df76248f8dce29c5ac9e670144bd3d6135389ce78767c6366bb9753204ddd3c4817bd03c423e8"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "uuid@11.1.1",
+      "type": "library",
+      "name": "uuid",
+      "version": "11.1.1",
+      "scope": "required",
+      "description": "RFC9562 UUIDs",
+      "purl": "pkg:npm/uuid@11.1.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/uuid/-/uuid-11.1.1.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/uuidjs/uuid.git"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "bc8631ac1082fcdfcaf89b37a9237cf20a3b9087cd3ecb2bfe11c27ac28240d0239a0bd84b6a2aafaf6422e7c41be3b8f8f7decce1f811b21e1c27c5a2ff1981"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "webidl-conversions@3.0.1",
+      "type": "library",
+      "name": "webidl-conversions",
+      "version": "3.0.1",
+      "scope": "required",
+      "author": "Domenic Denicola <d@domenic.me> (https://domenic.me/)",
+      "description": "Implements the WebIDL algorithms for converting to and from JavaScript values",
+      "purl": "pkg:npm/webidl-conversions@3.0.1",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/webidl-conversions/-/webidl-conversions-3.0.1.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "d89027df3f0047aae32bc4a6f28ad10b487f6dc97f0ea2fbb513dd199e08d428dd17e11a30b998c411f25ee28bf38f5eb9c3c586f068c4cb1f95f39bf24c5a79"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "BSD-2-Clause"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "whatwg-url@5.0.0",
+      "type": "library",
+      "name": "whatwg-url",
+      "version": "5.0.0",
+      "scope": "required",
+      "author": "Sebastian Mayr <github@smayr.name>",
+      "description": "An implementation of the WHATWG URL Standard's URL API and parsing machinery",
+      "purl": "pkg:npm/whatwg-url@5.0.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/whatwg-url/-/whatwg-url-5.0.0.tgz"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "b1a139ee7ba9c64eafdc7637e7e8f307061ad2b292cb45d1f094b164fc202ebef2b34201ce11af880d7f4d41892e6495aacf296fd027bc809712e3872e9ad84f"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "ws@8.21.3",
+      "type": "library",
+      "name": "ws",
+      "version": "8.21.3",
+      "scope": "required",
+      "author": "Einar Otto Stangvik <einaros@gmail.com> (http://2x.io)",
+      "description": "Simple to use, blazing fast and thoroughly tested websocket client and server for Node.js",
+      "purl": "pkg:npm/ws@8.21.3",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/ws/-/ws-8.21.3.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git+https://github.com/websockets/ws.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/websockets/ws"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "db4d5367f90f5b1a0faff38a5a3aae651d5258a5dcbf1747f9ed71af1f3d6f761b9b32cc1422df9da1b51c52205b324e11667b32fa4afbea1d66e7e0611e7447"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "MIT"
+          }
+        }
+      ]
+    },
+    {
+      "bom-ref": "xml-escape@1.1.0",
+      "type": "library",
+      "name": "xml-escape",
+      "version": "1.1.0",
+      "scope": "required",
+      "author": "Michael Hernandez - michael.hernandez1988@gmail.com",
+      "description": "Escape XML ",
+      "purl": "pkg:npm/xml-escape@1.1.0",
+      "properties": [],
+      "externalReferences": [
+        {
+          "type": "distribution",
+          "url": "https://registry.npmjs.org/xml-escape/-/xml-escape-1.1.0.tgz"
+        },
+        {
+          "type": "vcs",
+          "url": "git://github.com/miketheprogrammer/xml-escape.git"
+        },
+        {
+          "type": "website",
+          "url": "https://github.com/miketheprogrammer/xml-escape"
+        },
+        {
+          "type": "issue-tracker",
+          "url": "https://github.com/miketheprogrammer/xml-escape/issues"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-512",
+          "content": "07f4f8b032bc67a69487fa8dafb9a3280c309dc2258c5b943fe0cefc3e619686058fef743bcf33f167fba12b9c6531f1040b02d7f0933f8aedc7fc7551fef632"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "tikgo@0.15.0",
+      "dependsOn": [
+        "edge-tts-universal@1.4.0",
+        "react@19.2.8",
+        "react-dom@19.2.8",
+        "tiktok-live-connector@2.4.4",
+        "ws@8.21.3"
+      ]
+    },
+    {
+      "ref": "@bufbuild/protobuf@2.14.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "@keyv/serialize@1.1.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "@sec-ant/readable-stream@0.4.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "byte-counter@0.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "chunk-data@0.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "cross-fetch@4.1.0",
+      "dependsOn": [
+        "node-fetch@2.7.0"
+      ]
+    },
+    {
+      "ref": "edge-tts-universal@1.4.0",
+      "dependsOn": [
+        "cross-fetch@4.1.0",
+        "isomorphic-ws@5.0.0",
+        "uuid@11.1.1",
+        "ws@8.21.3",
+        "xml-escape@1.1.0"
+      ]
+    },
+    {
+      "ref": "is-stream@4.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "isomorphic-ws@5.0.0",
+      "dependsOn": [
+        "ws@8.21.3"
+      ]
+    },
+    {
+      "ref": "node-fetch@2.7.0",
+      "dependsOn": [
+        "whatwg-url@5.0.0"
+      ]
+    },
+    {
+      "ref": "react@19.2.8",
+      "dependsOn": []
+    },
+    {
+      "ref": "react-dom@19.2.8",
+      "dependsOn": [
+        "react@19.2.8",
+        "scheduler@0.27.0"
+      ]
+    },
+    {
+      "ref": "scheduler@0.27.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "tagged-tag@1.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "tiktok-live-api-sdk@0.4.0-beta1",
+      "dependsOn": []
+    },
+    {
+      "ref": "tiktok-live-connector@2.4.4",
+      "dependsOn": [
+        "@bufbuild/protobuf@2.14.0",
+        "tiktok-live-api-sdk@0.4.0-beta1",
+        "tiktok-live-proto@0.2.4",
+        "got@15.1.0",
+        "typed-emitter@2.1.0",
+        "ws@8.21.3"
+      ]
+    },
+    {
+      "ref": "@sindresorhus/is@8.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "cacheable-lookup@7.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "cacheable-request@13.0.19",
+      "dependsOn": [
+        "get-stream@9.0.1",
+        "keyv@5.6.0",
+        "mimic-response@4.0.0",
+        "normalize-url@8.1.1",
+        "responselike@4.0.2"
+      ]
+    },
+    {
+      "ref": "decompress-response@10.0.0",
+      "dependsOn": [
+        "mimic-response@4.0.0"
+      ]
+    },
+    {
+      "ref": "get-stream@9.0.1",
+      "dependsOn": [
+        "@sec-ant/readable-stream@0.4.1",
+        "is-stream@4.0.1"
+      ]
+    },
+    {
+      "ref": "got@15.1.0",
+      "dependsOn": [
+        "@sindresorhus/is@8.1.0",
+        "byte-counter@0.1.0",
+        "cacheable-lookup@7.0.0",
+        "cacheable-request@13.0.19",
+        "chunk-data@0.1.0",
+        "decompress-response@10.0.0",
+        "http2-wrapper@2.2.1",
+        "keyv@5.6.0",
+        "lowercase-keys@4.0.1",
+        "responselike@4.0.2",
+        "type-fest@5.8.0",
+        "uint8array-extras@1.5.0"
+      ]
+    },
+    {
+      "ref": "http2-wrapper@2.2.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "keyv@5.6.0",
+      "dependsOn": [
+        "@keyv/serialize@1.1.1"
+      ]
+    },
+    {
+      "ref": "lowercase-keys@4.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "mimic-response@4.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "normalize-url@8.1.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "responselike@4.0.2",
+      "dependsOn": [
+        "lowercase-keys@3.0.0"
+      ]
+    },
+    {
+      "ref": "lowercase-keys@3.0.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "tiktok-live-proto@0.2.4",
+      "dependsOn": [
+        "@bufbuild/protobuf@2.14.0"
+      ]
+    },
+    {
+      "ref": "tr46@0.0.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "type-fest@5.8.0",
+      "dependsOn": [
+        "tagged-tag@1.0.0"
+      ]
+    },
+    {
+      "ref": "typed-emitter@2.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "uint8array-extras@1.5.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "uuid@11.1.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "webidl-conversions@3.0.1",
+      "dependsOn": []
+    },
+    {
+      "ref": "whatwg-url@5.0.0",
+      "dependsOn": [
+        "tr46@0.0.3",
+        "webidl-conversions@3.0.1"
+      ]
+    },
+    {
+      "ref": "ws@8.21.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "xml-escape@1.1.0",
+      "dependsOn": []
+    }
+  ]
+}

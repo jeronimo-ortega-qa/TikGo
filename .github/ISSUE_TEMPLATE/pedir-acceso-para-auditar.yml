@@ -1,0 +1,36 @@
+name: Pedir acceso para auditar
+description: Acceso de solo lectura al código privado, para una auditoría.
+title: "[Auditoría] "
+labels: ["auditoría"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        El código de TikGO es privado. Para auditarlo se da acceso de **solo lectura** a una cuenta de GitHub. No pongas aquí datos personales que no quieras que sean públicos: los detalles se acuerdan en privado.
+  - type: input
+    id: cuenta
+    attributes:
+      label: Cuenta de GitHub que necesita el acceso
+    validations:
+      required: true
+  - type: input
+    id: quien
+    attributes:
+      label: Quién audita
+      description: Persona, empresa, institución o proyecto.
+    validations:
+      required: true
+  - type: textarea
+    id: alcance
+    attributes:
+      label: Qué se quiere revisar y para qué
+      description: Seguridad, privacidad, licencias, calidad, una parte concreta…
+    validations:
+      required: true
+  - type: input
+    id: plazo
+    attributes:
+      label: Por cuánto tiempo hace falta el acceso
+      placeholder: "30 días"
+    validations:
+      required: true
