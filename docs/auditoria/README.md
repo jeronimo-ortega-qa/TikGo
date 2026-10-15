@@ -31,8 +31,8 @@ Por orden de gravedad. El detalle está en
 
 ## Acceso al código
 
-El código es privado. Quien necesite auditarlo puede pedir acceso de **solo
-lectura** al repositorio privado (ver el README del repositorio público). Con el
+El código es privado. Quien necesite auditarlo puede pedir acceso al
+repositorio privado (ver el README del repositorio público). Con el
 código, todo lo de esta carpeta se puede comprobar con:
 
 ```bash

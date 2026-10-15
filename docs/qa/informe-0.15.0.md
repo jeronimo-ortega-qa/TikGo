@@ -17,6 +17,7 @@
 | · unidad | 28 |
 | · cadena (live simulado de punta a punta) | 29 |
 | Mutaciones | **16 de 16** detectadas: cada error corregido, vuelto a poner, hace fallar su prueba |
+| Cobertura de `src/main` | **48 %** de las líneas, 70 % de las ramas y 36 % de las funciones (`npm run test:cobertura`) |
 | Compilación de la interfaz | `npx vite build` sin errores |
 | Defectos registrados | 136 entradas: 84 corregidas, 28 abiertas, 4 mitigadas, 12 requisitos y 5 controles que se cumplen |
 
@@ -65,5 +66,6 @@ los juegos abiertos. Ninguno se ejecutó en esta corrida.
 npm ci
 npm test
 npm run test:mutaciones
+npm run test:cobertura
 npx vite build
 ```

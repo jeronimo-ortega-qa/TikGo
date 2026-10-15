@@ -1,12 +1,12 @@
 name: Pedir acceso para auditar
-description: Acceso de solo lectura al código privado, para una auditoría.
+description: Acceso al código privado, para una auditoría.
 title: "[Auditoría] "
 labels: ["auditoría"]
 body:
   - type: markdown
     attributes:
       value: |
-        El código de TikGO es privado. Para auditarlo se da acceso de **solo lectura** a una cuenta de GitHub. No pongas aquí datos personales que no quieras que sean públicos: los detalles se acuerdan en privado.
+        El código de TikGO es privado. Para auditarlo se da acceso a una cuenta de GitHub, por un plazo acordado. No pongas aquí datos personales que no quieras que sean públicos: los detalles se acuerdan en privado.
   - type: input
     id: cuenta
     attributes:
