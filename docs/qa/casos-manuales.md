@@ -10,7 +10,11 @@ que se vio, no corregir sobre la marcha.
 
 | Estado | Casos |
 |---|---|
-| Sin ejecutar | todos (al 2026-10-12) |
+| Sin ejecutar como caso formal | todos (al 2026-10-15) |
+
+Varias de estas funciones ya pasaron por [pruebas de campo](pruebas-de-campo.md), y de
+ahí salieron arreglos. Estos casos son para confirmar en un live esos arreglos y lo que
+nunca se vio en vivo.
 
 ---
 

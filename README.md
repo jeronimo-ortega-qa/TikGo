@@ -32,7 +32,7 @@ trabados.
 |---|---|---|
 | **1. Análisis de requisitos** | Los requisitos de cada sección de la app y los de las leyes de privacidad (RGPD, leyes de Argentina, Brasil, México y Chile, COPPA y fallos del TJUE). Con eso, los riesgos ordenados por impacto: que la app no se quede muda en vivo, que cuente bien el dinero, que no trate datos sin permiso, que aguante un live grande y que no rompa la máquina del streamer. | [Plan de pruebas](docs/qa/plan-de-pruebas.md#qué-se-prueba-primero) · [Privacidad](docs/privacidad-y-seguridad.md) |
 | **2. Diseño de casos de prueba** | 72 pruebas automatizadas, cada una atada al código de un defecto, y 16 casos manuales con preparación, pasos y resultado esperado para lo que solo se comprueba en vivo, en OBS o con el juego abierto. | [Casos manuales](docs/qa/casos-manuales.md) · [Pruebas incluidas](#pruebas-incluidas) |
-| **3. Ejecución** | Pruebas exploratorias en la app real y en lives controlados; los 49 efectos originales de GTA V probados uno por uno dentro del juego; mediciones de CPU, memoria y disco con la configuración real; y la suite automatizada. | [Registro de defectos](docs/qa/registro-de-defectos.md) · [Matriz de verificación](docs/qa/matriz-de-verificacion.md) |
+| **3. Ejecución** | Pruebas de campo en 9 sesiones: lives controlados y con audiencia, una grabación de TikTok LIVE Studio y los 49 efectos originales de GTA V uno por uno dentro del juego. Además, mediciones de CPU, memoria y disco con la configuración real, y la suite automatizada. | [Pruebas de campo](docs/qa/pruebas-de-campo.md) · [Registro de defectos](docs/qa/registro-de-defectos.md) · [Matriz de verificación](docs/qa/matriz-de-verificacion.md) |
 | **4. Evaluación** | Cobertura de código, pruebas de mutación para comprobar que cada prueba detecta su error, y los defectos clasificados por severidad y estado. | [Informe de la 0.15.0](docs/qa/informe-0.15.0.md) |
 | **5. Conclusiones y próximos pasos** | Lo aprendido, lo que falta y los bloqueantes antes de distribuir. | [Conclusiones](#7-conclusiones) |
 
@@ -92,31 +92,37 @@ severidad S1 nuevo respecto de la versión anterior.
 | Pruebas automatizadas | **72 de 72** pasan, en unos 6 segundos |
 | Pruebas de mutación | **16 de 16** errores reintroducidos fueron detectados |
 | Cobertura de código (`src/main`) | **48 %** de las líneas, **70 %** de las ramas, **36 %** de las funciones |
-| Defectos registrados | **136** entradas |
-| Casos manuales | 16 diseñados, ninguno ejecutado todavía |
+| Defectos registrados | **152** entradas |
+| Pruebas de campo | **9** sesiones entre agosto y septiembre; de ahí salieron **27** de los defectos |
 
 **Defectos por severidad y estado**
 
 | Severidad | Corregidos | Abiertos | Mitigados, por diseño o no reproducibles | Requisitos y controles que se cumplen | Total |
 |---|---|---|---|---|---|
 | **S1** · crítica | 15 | 3 | — | 9 | 27 |
-| **S2** · alta | 36 | 5 | 1 | 6 | 48 |
-| **S3** · media | 32 | 13 | 4 | 1 | 50 |
-| **S4** · baja | 1 | 7 | 2 | 1 | 11 |
-| **Total** | **84** | **28** | **7** | **17** | **136** |
+| **S2** · alta | 45 | 5 | 1 | 6 | 57 |
+| **S3** · media | 38 | 13 | 4 | 1 | 56 |
+| **S4** · baja | 2 | 7 | 2 | 1 | 12 |
+| **Total** | **100** | **28** | **7** | **17** | **152** |
 
-**Encontrados probando en vivo o con el juego abierto**, entre otros:
+**Encontrados en las [pruebas de campo](docs/qa/pruebas-de-campo.md)**, entre otros:
 
 - La app dejaba de funcionar a los 10-20 minutos de conectada (CON-03).
 - "Voltear pantalla" se veía en la PC pero no en el live: la grabación de TikTok
   LIVE Studio salía derecha (JUE-03).
-- El mouse invertido mandaba el cursor a una esquina y no lo dejaba salir (JUE-04).
-- Después de probar el bloqueo de botones, el DualSense dejó de andar en todo el
-  sistema (JUE-06).
+- Seguir y Compartir no disparaban en dos secciones porque compartían un registro
+  de "ya lo vi" con una tercera (REG-07).
+- Los combos no multiplicaban: 3 rosas en combo daban 3 esqueletos en Minecraft, no 9
+  (JUE-22).
 - Regalos grandes que no caían en el tarro de donaciones porque TikTok no siempre
   manda el último tick del combo (REG-01).
-- En Minecraft, la TNT no explotaba (MIN-09); en R.E.P.O., el mod no hacía nada sin
-  dar ningún error (REPO-01).
+- En GTA V, los enemigos que manda la audiencia salían corriendo en vez de pelear
+  (GTA-19).
+
+**Encontrados probando a mano fuera de un live**: el mouse invertido que mandaba el
+cursor a una esquina (JUE-04), el DualSense que quedó oculto para todo Windows después
+de probar el bloqueo de botones (JUE-06), la TNT que no explotaba en Minecraft (MIN-09)
+y el mod de R.E.P.O. que no hacía nada sin dar ningún error (REPO-01).
 
 **Encontrados al rehacer la suite automatizada** (octubre de 2026): la voz mandaba
 medio teléfono a Microsoft (VOZ-04), un teléfono con paréntesis quedaba a medio tapar
@@ -289,8 +295,9 @@ $ npm run test:cobertura
   caro ni se ejecuta.
 - **El entorno de prueba tiene que estar aislado.** Probar contra la máquina real me
   dejó el control oculto para todo Windows y una vez instaló una versión encima de la
-  mía. Además, los scripts de prueba de los primeros meses se perdieron por vivir en una
-  carpeta temporal. Hoy las pruebas viven en el repositorio, cortan la red y los
+  mía; en un live, ningún arreglo hacía efecto porque el juego tenía cargada una versión
+  vieja del mod. Además, los scripts de prueba de los primeros meses se perdieron por
+  vivir en una carpeta temporal. Hoy las pruebas viven en el repositorio, cortan la red y los
   procesos, y usan una carpeta de datos propia.
 - **Trabajar con un asistente de IA que escribe el código obliga a verificar todo.**
   La herramienta escribió buena parte del código siguiendo mis instrucciones y propuso
@@ -299,8 +306,9 @@ $ npm run test:cobertura
 
 **Qué mejoraría con más tiempo o recursos**
 
-- Ejecutar los 16 casos manuales en lives reales, empezando por el live largo con un
-  corte de Wi-Fi (CM-01).
+- Volver a pasar por un live los arreglos que salieron de las pruebas de campo y
+  quedaron sin reconfirmar, empezando por un live largo que confirme que la app ya no se
+  queda muda (CM-01).
 - Subir la cobertura del 48 %: la interfaz de React no tiene pruebas automatizadas, ni
   los efectos sobre Windows.
 - Correr las pruebas en cada cambio con integración continua (GitHub Actions).
@@ -324,9 +332,10 @@ $ npm run test:cobertura
 | | |
 |---|---|
 | [Plan de pruebas](docs/qa/plan-de-pruebas.md) | Riesgos, niveles, entorno, reglas y criterio de salida |
-| [Registro de defectos](docs/qa/registro-de-defectos.md) | Los 136, con síntoma, causa, corrección y verificación, por área |
+| [Registro de defectos](docs/qa/registro-de-defectos.md) | Los 152, con síntoma, causa, corrección y verificación, por área |
+| [Pruebas de campo](docs/qa/pruebas-de-campo.md) | Las 9 sesiones en vivo y con los juegos, y qué encontró cada una |
 | [Matriz de verificación](docs/qa/matriz-de-verificacion.md) | Qué función se comprobó dónde: simulado, app real, juego, OBS, live |
-| [Casos manuales](docs/qa/casos-manuales.md) | Lo que falta comprobar en vivo |
+| [Casos manuales](docs/qa/casos-manuales.md) | Lo que falta reconfirmar en vivo |
 | [Informe de la 0.15.0](docs/qa/informe-0.15.0.md) | El resultado de la última corrida completa |
 | [Auditoría](docs/auditoria/README.md) | Conexiones de red, cambios en Windows, dependencias, SBOM y hashes |
 | [Privacidad y seguridad](docs/privacidad-y-seguridad.md) | Qué datos de la audiencia se tratan y con qué base legal |

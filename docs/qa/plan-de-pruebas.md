@@ -7,7 +7,8 @@ lista para salir. Es el punto de entrada de la documentación de calidad:
 |---|---|
 | [`registro-de-defectos.md`](registro-de-defectos.md) | Cada error conocido, con su severidad, estado y verificación |
 | [`matriz-de-verificacion.md`](matriz-de-verificacion.md) | Qué función se comprobó dónde |
-| [`casos-manuales.md`](casos-manuales.md) | Lo que solo se comprueba en vivo, en OBS o con el juego |
+| [`pruebas-de-campo.md`](pruebas-de-campo.md) | Las sesiones en vivo y con los juegos, y qué encontró cada una |
+| [`casos-manuales.md`](casos-manuales.md) | Lo que falta reconfirmar en vivo, en OBS o con el juego |
 | [`informe-0.15.0.md`](informe-0.15.0.md) | El resultado de la última corrida completa |
 
 ## Qué se prueba primero
@@ -35,7 +36,8 @@ El riesgo de esta app está casi todo en el camino caliente del live. Por orden:
 | **Mutación** | Vuelve a poner cada error corregido y exige que su prueba falle | `npm run test:mutaciones` | Antes de cada versión y al tocar una prueba |
 | **App real** | La app en Windows con una copia de la configuración, sin tocar la de verdad | Manual | Al cambiar la interfaz o el arranque |
 | **Dentro del juego** | Minecraft, R.E.P.O. o GTA V abiertos | Manual | Al cambiar un mod |
-| **En vivo, OBS y Live Studio** | Los casos `CM-xx` | Manual | Antes de la 1.0.0, y al tocar esa parte |
+| **Pruebas de campo** | Lives de verdad y controlados, TikTok LIVE Studio y los juegos abiertos ([sesiones](pruebas-de-campo.md)) | Manual | Al tocar algo que solo se ve en vivo |
+| **Confirmación en vivo** | Los casos `CM-xx`, para los arreglos que salieron del campo | Manual | Antes de la 1.0.0, y al tocar esa parte |
 
 ## El entorno de las pruebas automáticas
 

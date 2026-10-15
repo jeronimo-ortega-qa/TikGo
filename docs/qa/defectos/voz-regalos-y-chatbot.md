@@ -118,6 +118,20 @@
   al que hace más que no participa (no es LRU, aunque `CLAUDE.md` lo agrupe con
   los LRU). Para un deduplicado da lo mismo en la práctica; queda anotado.
 
+### REG-07 · Seguir y Compartir no disparaban en Acciones y Eventos ni en Juegos Interactivos
+
+| Severidad | Estado | Módulo | Verificación |
+|---|---|---|---|
+| S2 | Corregido (2026-09-01) | `shared/event-dedupe.js` | Prueba de campo (2026-09-01) · prueba de reproducción al corregirlo |
+
+- **Síntoma.** En un live controlado, los Sonidos de seguir y compartir sonaban, pero
+  las Acciones y los efectos de los mismos eventos no pasaban nunca.
+- **Causa.** Los módulos compartían un solo registro de "a este ya lo vi". El primero
+  de la fila, Sonidos, marcaba al usuario y los demás lo veían como repetido.
+- **Corrección.** Cada módulo lleva su propio registro (lo que comprueba REG-05).
+  Reproducido antes de corregir: 0 disparos; después, 7 de 7. Y compartir dejó de
+  deduplicarse: compartir dos veces es una acción real.
+
 ### REG-06 · Faltan imágenes de regalos (81 %)
 
 | Severidad | Estado | Módulo | Verificación |

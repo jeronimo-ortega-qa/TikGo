@@ -38,7 +38,7 @@ esos archivos; `npm test` falla si quedó vieja.
 ## Índice
 
 <!-- indice:desde -->
-**136 entradas.** Corregido: 84 · Abierto: 28 · Por diseño: 2 · Control: 5 · Mitigado: 4 · No reproducible: 1 · Requisito: 12.
+**152 entradas.** Corregido: 100 · Abierto: 28 · Por diseño: 2 · Control: 5 · Mitigado: 4 · No reproducible: 1 · Requisito: 12.
 
 **Abiertos de severidad S1 o S2: 8** (REPO-07, GTA-16, JUE-17, SEG-03, SEG-08, LIC-01, LIC-02, LIC-03).
 
@@ -76,7 +76,10 @@ esos archivos; `npm test` falla si quedó vieja.
 | [MIN-09](defectos/juegos-con-mod.md) | La TNT puesta no explotaba | S3 | Corregido | Contra un Paper real |
 | [MIN-10](defectos/juegos-con-mod.md) | El servidor se cerraba con código 1 por el Java equivocado | S2 | Corregido | Contra un Paper real |
 | [MIN-11](defectos/juegos-con-mod.md) | Un espectador podía pintar su mensaje o imitar avisos del servidor | S3 | Corregido | Contra un Paper real |
-| [MIN-12](defectos/juegos-con-mod.md) | Falta probarlo con jugadores de verdad | S3 | Abierto | Caso manual CM-12 |
+| [MIN-12](defectos/juegos-con-mod.md) | Falta probarlo con otros jugadores conectados | S3 | Abierto | Prueba de campo (2026-09-07) · caso manual CM-12 |
+| [MIN-13](defectos/juegos-con-mod.md) | Un combo de rosas mandaba un cartel por cada rosa | S3 | Corregido (0.6.2) | Prueba de campo (2026-09-07 y 2026-09-09) · prueba de punta a punta al corregirlo |
+| [MIN-14](defectos/juegos-con-mod.md) | La jaula de TNT no atrapaba al streamer si se estaba moviendo | S3 | Corregido (0.6.2) | Prueba de campo (2026-09-07) |
+| [MIN-15](defectos/juegos-con-mod.md) | Los rayos caían al costado y no hacían nada | S3 | Corregido (0.6.3) | Prueba de campo (2026-09-07) |
 | [REPO-01](defectos/juegos-con-mod.md) | `Update` no se llamaba nunca y no había ningún error | S1 | Corregido (2026-09-04) | Dentro del juego (registro del mod) |
 | [REPO-02](defectos/juegos-con-mod.md) | El puente quedaba mudo después de un cambio de escena | S1 | Corregido | Dentro del juego |
 | [REPO-03](defectos/juegos-con-mod.md) | El catálogo de enemigos quedaba vacío para siempre | S2 | Corregido | Dentro del juego |
@@ -100,6 +103,11 @@ esos archivos; `npm test` falla si quedó vieja.
 | [GTA-14](defectos/juegos-con-mod.md) | El reloj de los efectos corría con el juego en pausa | S3 | Corregido | Prueba en C# (fuera de `tests/`) |
 | [GTA-15](defectos/juegos-con-mod.md) | El minipanel decía "Listo" con un mod que no se podía conectar | S2 | Corregido | Dentro del juego |
 | [GTA-16](defectos/juegos-con-mod.md) | 21 efectos nunca se ejecutaron dentro del juego | S2 | Abierto | Caso manual CM-14 |
+| [GTA-17](defectos/juegos-con-mod.md) | Un efecto con duración se vencía mientras el jugador estaba muerto | S3 | Corregido (0.13.2) | Prueba de campo (2026-09-20) · dentro del juego |
+| [GTA-18](defectos/juegos-con-mod.md) | "Reinstalar el mod" volvía a poner la versión vieja | S2 | Corregido (0.13.2) | Prueba de campo (2026-09-20) · registro del mod |
+| [GTA-19](defectos/juegos-con-mod.md) | Los enemigos que manda la audiencia salían corriendo en vez de pelear | S2 | Corregido (0.13.2) · sin reconfirmar en vivo | Prueba de campo (2026-09-20) · dentro del juego |
+| [GTA-20](defectos/juegos-con-mod.md) | Los enemigos se atacaban entre ellos | S3 | Corregido (0.13.2) | Prueba de campo (2026-09-20) · dentro del juego |
+| [GTA-21](defectos/juegos-con-mod.md) | El teletransporte "al azar" mandaba muy cerca | S4 | Corregido (0.13.2) | Prueba de campo (2026-09-20) · dentro del juego |
 | [REPO-08](defectos/juegos-con-mod.md) | R.E.P.O. todavía decide "al día" por el tamaño del DLL | S3 | Abierto | Revisión de código |
 | [JUE-01](defectos/juegos-interactivos.md) | El jumpscare no se veía | S1 | Corregido (2026-08-26) | Windows real |
 | [JUE-02](defectos/juegos-interactivos.md) | "Voltear pantalla" no funcionaba | S2 | Corregido (2026-08-26) | Windows real |
@@ -120,6 +128,10 @@ esos archivos; `npm test` falla si quedó vieja.
 | [JUE-17](defectos/juegos-interactivos.md) | Los efectos de teclado y mouse no se probaron contra un juego real | S2 | Abierto | Caso manual CM-04 |
 | [JUE-18](defectos/juegos-interactivos.md) | Aplicar un preajuste generó 9 Eventos sin Acción una vez | S3 | No reproducible · mitigado | Revisión de código |
 | [JUE-19](defectos/juegos-interactivos.md) | Invertir la dirección del mouse: mitigado, no resuelto | S3 | Abierto | Windows real |
+| [JUE-20](defectos/juegos-interactivos.md) | "Mantener tecla" apretaba la tecla una sola vez | S2 | Corregido (2026-09-01) | Prueba de campo (2026-09-01) · Windows real, con F13 |
+| [JUE-21](defectos/juegos-interactivos.md) | La superposición de Juegos Interactivos no se leía en el stream | S2 | Corregido (2026-09-05) | Prueba de campo (2026-08-27 y 2026-09-05) · navegador |
+| [JUE-22](defectos/juegos-interactivos.md) | Los combos no multiplicaban los efectos de un regalo | S2 | Corregido (0.6.1) | Prueba de campo (2026-09-07) · prueba de punta a punta al corregirlo |
+| [JUE-23](defectos/juegos-interactivos.md) | "Meta de Likes" se ofrecía en Juegos Interactivos y no estaba hecha | S2 | Corregido (0.6.2) | Prueba de campo (2026-09-07) · prueba de punta a punta al corregirlo |
 | [PRI-01](defectos/privacidad-seguridad-y-licencias.md) | Sin edad y aviso aceptados, nada sale hacia TikTok, Euler ni Microsoft | S1 | Requisito · cumple | Automática (`tests/cadena/en-vivo.test.js`) |
 | [PRI-02](defectos/privacidad-seguridad-y-licencias.md) | !olvidame borra a la persona de todos los módulos y la excluye | S1 | Requisito · cumple · falta en un live | Automática · caso manual CM-08 |
 | [PRI-03](defectos/privacidad-seguridad-y-licencias.md) | Lo de una persona excluida no llega a ningún módulo | S1 | Requisito · cumple | Automática y mutación |
@@ -166,7 +178,10 @@ esos archivos; `npm test` falla si quedó vieja.
 | [SUP-04](defectos/superposiciones-y-multimedia.md) | Las alertas con video de Acciones y Eventos no se probaron en OBS | S3 | Abierto | Caso manual CM-05 |
 | [SUP-05](defectos/superposiciones-y-multimedia.md) | Las superposiciones le piden sus fuentes a Google desde OBS | S4 | Abierto (decisión pendiente) | Revisión de código |
 | [SUP-06](defectos/superposiciones-y-multimedia.md) | Los videos de YouTube dentro de OBS no se probaron | S3 | Abierto | Caso manual CM-07 |
-| [SUP-07](defectos/superposiciones-y-multimedia.md) | Spotify nunca habló con la API de verdad | S3 | Abierto | 34 comprobaciones con la API simulada · caso manual CM-11 |
+| [SUP-07](defectos/superposiciones-y-multimedia.md) | Falta ver a Spotify pasar las canciones pedidas a su cola | S3 | Abierto | 34 comprobaciones con la API simulada · prueba de campo (2026-09-01) · caso manual CM-11 |
+| [SUP-08](defectos/superposiciones-y-multimedia.md) | El chat en vivo se quedaba en los primeros mensajes del live | S2 | Corregido (2026-09-01) · sin reconfirmar con OBS abierto un rato largo | Prueba de campo (2026-09-01) |
+| [SUP-09](defectos/superposiciones-y-multimedia.md) | La pantalla de Spotify prometía un botón que no existía | S3 | Corregido (2026-09-01) | Prueba de campo (2026-09-01) |
+| [SUP-10](defectos/superposiciones-y-multimedia.md) | Las alertas no cargaban en TikTok LIVE Studio y sí en el navegador | S2 | Corregido · falta confirmar en Live Studio | Prueba de campo (2026-09-02) |
 | [VOZ-01](defectos/voz-regalos-y-chatbot.md) | Una síntesis colgada dejaba la voz muda el resto del stream | S1 | Corregido | Automática y mutación (`tests/cadena/en-vivo.test.js`) |
 | [VOZ-02](defectos/voz-regalos-y-chatbot.md) | El monedero de la voz no tenía tope y ordenaba a todos en cada comentario | S3 | Corregido (0.12.5) | Automática y mutación · medición |
 | [VOZ-03](defectos/voz-regalos-y-chatbot.md) | Los combos multiplicaban el total regalado | S2 | Corregido | Automática y mutación |
@@ -177,6 +192,7 @@ esos archivos; `npm test` falla si quedó vieja.
 | [REG-03](defectos/voz-regalos-y-chatbot.md) | El mismo regalo tiene un id distinto en cada región | S2 | Corregido | Automática |
 | [REG-04](defectos/voz-regalos-y-chatbot.md) | Deduplicar por id de mensaje perdía los ticks del combo | S2 | Corregido | Automática y mutación |
 | [REG-05](defectos/voz-regalos-y-chatbot.md) | TikTok reenvía el "seguir" de quien vuelve a entrar | S3 | Corregido | Automática |
+| [REG-07](defectos/voz-regalos-y-chatbot.md) | Seguir y Compartir no disparaban en Acciones y Eventos ni en Juegos Interactivos | S2 | Corregido (2026-09-01) | Prueba de campo (2026-09-01) · prueba de reproducción al corregirlo |
 | [REG-06](defectos/voz-regalos-y-chatbot.md) | Faltan imágenes de regalos (81 %) | S4 | Abierto (por límite externo) | Medición · `docs/imagenes-de-regalos.md` |
 | [CHB-01](defectos/voz-regalos-y-chatbot.md) | {espectadores} y {seguidores} daban siempre 0 y "—" | S3 | Corregido (0.12.5) | Automática (`tests/cadena/conexion.test.js`) |
 | [CHB-02](defectos/voz-regalos-y-chatbot.md) | Escribir en el chat de TikTok va contra sus términos y necesita un add-on pago | S2 | Por diseño (límite externo) | Caso manual CM-09 |

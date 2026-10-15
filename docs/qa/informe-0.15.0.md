@@ -19,7 +19,7 @@
 | Mutaciones | **16 de 16** detectadas: cada error corregido, vuelto a poner, hace fallar su prueba |
 | Cobertura de `src/main` | **48 %** de las líneas, 70 % de las ramas y 36 % de las funciones (`npm run test:cobertura`) |
 | Compilación de la interfaz | `npx vite build` sin errores |
-| Defectos registrados | 136 entradas: 84 corregidas, 28 abiertas, 4 mitigadas, 12 requisitos y 5 controles que se cumplen |
+| Defectos registrados | 152 entradas: 100 corregidas, 28 abiertas, 4 mitigadas, 12 requisitos y 5 controles que se cumplen. 16 se sumaron el 2026-10-15 desde las [pruebas de campo](pruebas-de-campo.md), que no estaban registradas |
 
 ## Encontrado en esta auditoría
 
@@ -58,7 +58,8 @@ empaqueta el proceso principal.
 ## Lo que esta corrida no cubre
 
 Todo lo de `casos-manuales.md` (CM-01 a CM-16): un live de verdad, OBS, Live Studio y
-los juegos abiertos. Ninguno se ejecutó en esta corrida.
+los juegos abiertos. Ninguno se ejecutó en esta corrida; las pruebas en vivo hechas
+antes están en `pruebas-de-campo.md`.
 
 ## Cómo repetirla
 

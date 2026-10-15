@@ -184,3 +184,50 @@ desarrollo. Las mediciones y los porqués están en
 | S3 | Abierto | `interactive-games/mouse-interference.js` | Windows real |
 
 - **Solución de fondo.** Leer por Raw Input, en un ejecutable nativo (deuda técnica).
+
+### JUE-20 · "Mantener tecla" apretaba la tecla una sola vez
+
+| Severidad | Estado | Módulo | Verificación |
+|---|---|---|---|
+| S2 | Corregido (2026-09-01) | `interactive-games/system-effects.js` | Prueba de campo (2026-09-01) · Windows real, con F13 |
+
+- **Causa.** Mandaba un solo evento de bajada y esperaba; un teclado real repite unas
+  30 veces por segundo mientras la tecla está apretada.
+- **Corrección.** Imita esa repetición. Verificado contra Windows con F13, que no existe
+  en teclados físicos: 12 de 12 muestras la ven apretada durante el efecto, 0 al terminar.
+
+### JUE-21 · La superposición de Juegos Interactivos no se leía en el stream
+
+| Severidad | Estado | Módulo | Verificación |
+|---|---|---|---|
+| S2 | Corregido (2026-09-05) | `interactive-games/game-overlay-server.js` | Prueba de campo (2026-08-27 y 2026-09-05) · navegador |
+
+- **Síntoma.** Borrosa al agrandarla en Live Studio, y en pleno live la resolución
+  personalizada la desarmaba. Las tarjetas eran demasiado chicas para leerse.
+- **Corrección.** La página dejó de tener medida propia: ocupa la fuente de navegador,
+  del tamaño que sea, y se encaja por los dos ejes. Un preajuste "Escaparate" agranda
+  imagen, ícono y número. Comprobado a 1420 × 449 y a 900 × 220 sin nada cortado.
+
+### JUE-22 · Los combos no multiplicaban los efectos de un regalo
+
+| Severidad | Estado | Módulo | Verificación |
+|---|---|---|---|
+| S2 | Corregido (0.6.1) | `interactive-games/index.js` | Prueba de campo (2026-09-07) · prueba de punta a punta al corregirlo |
+
+- **Síntoma.** En vivo, con "1 rosa = 3 esqueletos", un combo de 3 rosas daba 3
+  esqueletos y no 9.
+- **Causa.** Cada Acción se disparaba una vez; el `repeatCount` del regalo se ignoraba.
+- **Corrección.** Se multiplica solo en disparadores de regalo, con tope de 200
+  ejecuciones y un aviso en pantalla cuando recorta.
+
+### JUE-23 · "Meta de Likes" se ofrecía en Juegos Interactivos y no estaba hecha
+
+| Severidad | Estado | Módulo | Verificación |
+|---|---|---|---|
+| S2 | Corregido (0.6.2) | `interactive-games/index.js`, `shared/like-tracker.js` | Prueba de campo (2026-09-07) · prueba de punta a punta al corregirlo |
+
+- **Causa.** Los tres disparadores de umbral de likes nunca se implementaron ahí,
+  aunque la pantalla los ofrecía. En Acciones y Eventos, donde sí estaban, el conteo por
+  persona no se reiniciaba nunca y la meta disparaba una sola vez por sesión de la app.
+- **Corrección.** Rastreo de likes compartido, con registro por módulo y reinicio en
+  cada live.

@@ -61,13 +61,49 @@ abriendo las páginas reales en el navegador; dentro de OBS falta casi todo
 - **Qué falta.** Que el video arranque solo y con audio en la fuente de navegador de
   OBS: la política de autoplay del CEF de OBS puede ser otra que la del navegador.
 
-### SUP-07 · Spotify nunca habló con la API de verdad
+### SUP-07 · Falta ver a Spotify pasar las canciones pedidas a su cola
 
 | Severidad | Estado | Módulo | Verificación |
 |---|---|---|---|
-| S3 | Abierto | `spotify/` | 34 comprobaciones con la API simulada · caso manual CM-11 |
+| S3 | Abierto | `spotify/` | 34 comprobaciones con la API simulada · prueba de campo (2026-09-01) · caso manual CM-11 |
+
+- **Lo que sí se vio en vivo.** El 2026-09-01 la cuenta se vinculó con Spotify de
+  verdad y los pedidos del chat entraron a la cola de la app. Lo que falta es ver una
+  canción pasar a la cola de Spotify y sonar en su turno.
 
 - **Límites conocidos de Spotify, por diseño.** Hace falta Premium (`403
   PREMIUM_REQUIRED` al encolar), hace falta un dispositivo activo (`404
   NO_ACTIVE_DEVICE`) y su cola solo permite agregar, por eso la app lleva la suya y
   le pasa una canción a 20 s del final.
+
+### SUP-08 · El chat en vivo se quedaba en los primeros mensajes del live
+
+| Severidad | Estado | Módulo | Verificación |
+|---|---|---|---|
+| S2 | Corregido (2026-09-01) · sin reconfirmar con OBS abierto un rato largo | `shared/overlay-http-server.js`, páginas de las superposiciones | Prueba de campo (2026-09-01) |
+
+- **Causa.** El websocket entre la app y la página reconectaba solo si se cerraba
+  limpio; dentro de OBS puede quedar a medio cerrar y la página nunca se entera.
+- **Corrección.** Latido de los dos lados: el servidor suelta a la página que no
+  responde y la página se reconecta si pasan 30 s sin recibir nada.
+
+### SUP-09 · La pantalla de Spotify prometía un botón que no existía
+
+| Severidad | Estado | Módulo | Verificación |
+|---|---|---|---|
+| S3 | Corregido (2026-09-01) | `spotify/`, `MultimediaPanel.jsx` | Prueba de campo (2026-09-01) |
+
+- **Síntoma.** Con la cola automática apagada, la app decía que las canciones esperaban
+  "hasta que las mandes a mano", y no había forma de mandarlas.
+- **Corrección.** Cada pedido tiene "Mandar a Spotify ahora", y si falla dice el motivo.
+
+### SUP-10 · Las alertas no cargaban en TikTok LIVE Studio y sí en el navegador
+
+| Severidad | Estado | Módulo | Verificación |
+|---|---|---|---|
+| S2 | Corregido · falta confirmar en Live Studio | `shared/mkcert-helper.js` | Prueba de campo (2026-09-02) |
+
+- **Causa.** La autoridad del certificado estaba instalada solo para el usuario de
+  Windows, y Live Studio no mira ese almacén.
+- **Corrección.** Instalarla también para la máquina, con permiso de administrador una
+  sola vez. Mientras tanto, la dirección HTTP sirve la misma superposición.

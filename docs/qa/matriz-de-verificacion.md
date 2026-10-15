@@ -1,8 +1,9 @@
 # Matriz de verificación
 
 Qué se comprobó de cada función y dónde. Una casilla vacía es algo que **no** se
-comprobó todavía: la mayoría de las funciones de TikGO están verificadas con eventos
-simulados y en la app real, pero no en un live de verdad.
+comprobó todavía. La columna "Live de verdad" sale de las
+[pruebas de campo](pruebas-de-campo.md): ◐ es que la función se usó en un live y lo que
+se encontró se corrigió, pero el arreglo no volvió a pasar por otro.
 
 ✔ comprobado · ◐ en parte · — no aplica · vacío: falta
 
@@ -12,14 +13,14 @@ simulados y en la app real, pero no en un live de verdad.
 | Conectarse solo al empezar el live | | ✔ | ◐ | — | — | — | |
 | Voz (Edge TTS): cola, reloj, idioma, tapado | ✔ | ✔ | ✔ | — | — | — | ◐ |
 | Sonidos y atajos de teclado | | ✔ | ✔ | — | — | — | ◐ |
-| Acciones y Eventos | ◐ | ✔ | ✔ | ✔ | — | | |
+| Acciones y Eventos | ◐ | ✔ | ✔ | ✔ | — | | ◐ |
 | Alertas con video de Acciones y Eventos | | ✔ | | ✔ | — | | |
-| Juegos Interactivos: efectos de escritorio | ◐ | ✔ | ✔ | — | | | |
+| Juegos Interactivos: efectos de escritorio | ◐ | ✔ | ✔ | — | | | ◐ |
 | Juegos Interactivos: teclado, mouse y control | | | ✔ | — | | — | |
-| Superposición de Juegos Interactivos | | ✔ | | ✔ | — | | |
+| Superposición de Juegos Interactivos | | ✔ | | ✔ | — | ◐ | ◐ |
 | Metas | | ✔ | ✔ | ✔ | — | | |
-| Superposiciones persistentes (las nueve) | | ✔ | | ✔ | — | | |
-| Multimedia · Spotify | | ✔ (API simulada) | | — | — | | |
+| Superposiciones persistentes (las nueve) | | ✔ | | ✔ | — | | ◐ |
+| Multimedia · Spotify | | ✔ (API simulada) | | — | — | | ◐ (vinculado, pedidos) |
 | Multimedia · YouTube | | ✔ (API simulada) | | ✔ | — | | |
 | Catálogo · Temporizador | | ✔ | | ✔ | — | | |
 | Catálogo · Puntos | ◐ | ✔ | | — | — | — | |
@@ -31,9 +32,9 @@ simulados y en la app real, pero no en un live de verdad.
 | Inicio: cosas que atender | | ✔ | ✔ | — | — | — | |
 | Arranque y esqueletos | ◐ | — | ✔ | — | — | — | — |
 | Bandeja del sistema | | — | ✔ | — | — | — | |
-| Minecraft: servidor y plugin | ◐ | ✔ | ✔ | — | ◐ (sin jugadores) | — | |
+| Minecraft: servidor y plugin | ◐ | ✔ | ✔ | — | ✔ (el streamer) | — | ◐ |
 | R.E.P.O. | | ✔ (cliente TCP falso) | ✔ | — | ◐ | — | |
-| GTA V: 49 efectos originales | ◐ | ✔ | ✔ | — | ✔ (Enhanced, Epic) | — | |
+| GTA V: 49 efectos originales | ◐ | ✔ | ✔ | — | ✔ (Enhanced, Epic) | — | ◐ |
 | GTA V: 21 trampas, trolleos y desastres | ◐ | ✔ | | — | | — | |
 | Instalador | — | — | ✔ (0.14.1) | — | — | — | — |
 

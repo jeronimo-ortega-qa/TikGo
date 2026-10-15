@@ -98,15 +98,41 @@ el juego abierto; las reglas y las mediciones están en `.claude/rules/minecraft
 
 - **Corrección.** Se le saca el `§` al texto que viene del live.
 
-### MIN-12 · Falta probarlo con jugadores de verdad
+### MIN-12 · Falta probarlo con otros jugadores conectados
 
 | Severidad | Estado | Módulo | Verificación |
 |---|---|---|---|
-| S3 | Abierto | `minecraft/`, `native/tikgo-plugin` | Caso manual CM-12 |
+| S3 | Abierto | `minecraft/`, `native/tikgo-plugin` | Prueba de campo (2026-09-07) · caso manual CM-12 |
 
-- **Qué falta.** Casi todos los efectos recorren los jugadores conectados, y el OP
-  al primero que entra necesita un cliente. Y el plugin se compiló contra Paper
+- **Qué falta.** El streamer jugó con los efectos de la audiencia en vivo; lo que no se
+  vio es a otros jugadores conectados al mismo tiempo, ni el OP al primero que entra. Y el plugin se compiló contra Paper
   1.21.4 con Java 21: hay que confirmar que siga cargando en 26.2 al recompilar.
+
+### MIN-13 · Un combo de rosas mandaba un cartel por cada rosa
+
+| Severidad | Estado | Módulo | Verificación |
+|---|---|---|---|
+| S3 | Corregido (0.6.2) | `interactive-games/`, `native/tikgo-plugin` | Prueba de campo (2026-09-07 y 2026-09-09) · prueba de punta a punta al corregirlo |
+
+- **Corrección.** Un solo cartel por activación, con el total: 8 rosas × repetición 3 ×
+  2 comandos = 48 comandos y un cartel que dice "skeleton x24".
+
+### MIN-14 · La jaula de TNT no atrapaba al streamer si se estaba moviendo
+
+| Severidad | Estado | Módulo | Verificación |
+|---|---|---|---|
+| S3 | Corregido (0.6.2) | `native/tikgo-plugin` | Prueba de campo (2026-09-07) |
+
+- **Causa.** La caja se armaba alrededor del bloque donde estaba; caminando, quedaba
+  afuera. Ahora lo centra adentro conservando hacia dónde miraba.
+
+### MIN-15 · Los rayos caían al costado y no hacían nada
+
+| Severidad | Estado | Módulo | Verificación |
+|---|---|---|---|
+| S3 | Corregido (0.6.3) | `native/tikgo-plugin` | Prueba de campo (2026-09-07) |
+
+- **Causa.** Caían dos bloques al costado y eran solo la animación, sin daño ni fuego.
 
 ## R.E.P.O.
 
@@ -298,6 +324,60 @@ el juego abierto; las reglas y las mediciones están en `.claude/rules/minecraft
 - **Qué falta.** Compilan y pasan las pruebas, pero las fuerzas del terremoto, el
   agujero negro, el tornado y el cono del aimbot son valores a ojo. También falta
   Legacy y las instalaciones de Steam y Rockstar.
+
+### GTA-17 · Un efecto con duración se vencía mientras el jugador estaba muerto
+
+| Severidad | Estado | Módulo | Verificación |
+|---|---|---|---|
+| S3 | Corregido (0.13.2) | `native/tikgo-gtav-mod` (`Temporizados.cs`) | Prueba de campo (2026-09-20) · dentro del juego |
+
+- **Síntoma.** En vivo, invisible al morir: al reaparecer el efecto ya no estaba.
+- **Corrección.** El reloj se congela mientras el jugador está muerto o la pantalla en
+  negro, igual que en pausa (GTA-14).
+
+### GTA-18 · "Reinstalar el mod" volvía a poner la versión vieja
+
+| Severidad | Estado | Módulo | Verificación |
+|---|---|---|---|
+| S2 | Corregido (0.13.2) | `gtav/index.js`, instalador | Prueba de campo (2026-09-20) · registro del mod |
+
+- **Síntoma.** En pleno live, ninguno de los arreglos del día hacía efecto.
+- **Causa.** El juego tenía cargada la 0.5.0: el botón "Reinstalar el mod" copiaba el DLL
+  que traía la versión instalada de TikGO, más viejo que el que se acababa de compilar.
+  Lo mostró el registro del mod, que dice su versión al cargar.
+- **Lección.** Antes de probar un arreglo, confirmar qué versión está corriendo de
+  verdad.
+
+### GTA-19 · Los enemigos que manda la audiencia salían corriendo en vez de pelear
+
+| Severidad | Estado | Módulo | Verificación |
+|---|---|---|---|
+| S2 | Corregido (0.13.2) · sin reconfirmar en vivo | `native/tikgo-gtav-mod` (`Estilos.cs`) | Prueba de campo (2026-09-20) · dentro del juego |
+
+- **Causa.** El miedo del juego: los enemigos que el mod soltaba volvían a manos de la
+  inteligencia del juego, que los hacía huir.
+- **Corrección.** Sin miedo al aparecer, ignoran los sustos, la orden de pelear no se
+  borra, el mod retiene a todos hasta que mueren y un vigía los vuelve a mandar a
+  pelear si huyen o se quedan quietos. En una tanda, el vigía anotó un enemigo que
+  intentó huir 5 veces y otro que se quedó quieto 108.
+
+### GTA-20 · Los enemigos se atacaban entre ellos
+
+| Severidad | Estado | Módulo | Verificación |
+|---|---|---|---|
+| S3 | Corregido (0.13.2) | `native/tikgo-gtav-mod` | Prueba de campo (2026-09-20) · dentro del juego |
+
+- **Causa.** Salían de pandillas distintas que se odian en el juego. Ahora todos
+  quedan en un grupo propio del mod que solo odia al jugador.
+
+### GTA-21 · El teletransporte "al azar" mandaba muy cerca
+
+| Severidad | Estado | Módulo | Verificación |
+|---|---|---|---|
+| S4 | Corregido (0.13.2) | `native/tikgo-gtav-mod` | Prueba de campo (2026-09-20) · dentro del juego |
+
+- **Corrección.** Sortea un punto en todo el mapa, lo baja a la calle más cercana y
+  busca que quede a más de 1,5 km.
 
 ### REPO-08 · R.E.P.O. todavía decide "al día" por el tamaño del DLL
 
